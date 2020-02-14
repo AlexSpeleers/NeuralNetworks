@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace NeuralNetworks
 {
-    class Neuron
+    public class Neuron
     {
         public List<double> Weights { get; }
         public NeuronType NeuronType { get; }
@@ -31,10 +31,18 @@ namespace NeuralNetworks
             return Output;
         }
 
-        private double Sigmoid(double x) 
+        private double Sigmoid(double x)
         {
             var result = 1.0 / (1.0 + Math.Pow(Math.E, -x));
             return result;
+        }
+
+        public void SetWeight(params double[] weights) 
+        {
+            for (int i = 0; i < weights.Length; i++)
+            {
+                Weights[i] = weights[i];
+            }
         }
 
         public override string ToString()
