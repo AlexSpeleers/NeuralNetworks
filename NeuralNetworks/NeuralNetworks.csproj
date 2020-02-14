@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Layer.cs" />
-    <Compile Include="NeuralNetworks.cs" />
+    <Compile Include="NeuralNetwork.cs" />
     <Compile Include="Neuron.cs" />
     <Compile Include="NeuronType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
